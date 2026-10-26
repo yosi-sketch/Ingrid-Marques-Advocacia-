@@ -463,7 +463,7 @@ export default function Home() {
           </div>
 
           {/* Main Navigation */}
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+          <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3.5 sm:px-8">
             <a
               href="#inicio"
               className="inline-flex items-center gap-3 transition-transform hover:scale-[1.01]"
@@ -476,34 +476,34 @@ export default function Home() {
                   fill
                   priority
                   sizes="(max-width: 640px) 230px, 280px"
-                  className="object-contain object-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]"
+                  className="object-contain object-left brightness-150 contrast-125 saturate-125 drop-shadow-[0_0_12px_rgba(222,178,106,0.65)]"
                 />
               </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden items-center gap-7 lg:flex">
-              <a className="nav-link" href="#inicio">
+            <nav className="hidden shrink-0 items-center gap-4 xl:flex">
+              <a className="nav-link whitespace-nowrap" href="#inicio">
                 Início
               </a>
-              <a className="nav-link" href="#sobre">
+              <a className="nav-link whitespace-nowrap" href="#sobre">
                 A Advogada
               </a>
-              <a className="nav-link" href="#atuacao">
+              <a className="nav-link whitespace-nowrap" href="#atuacao">
                 Especialidades
               </a>
-              <a className="nav-link" href="#diferenciais">
+              <a className="nav-link whitespace-nowrap" href="#diferenciais">
                 Por Que Escolher
               </a>
-              <a className="nav-link" href="#avaliacoes">
+              <a className="nav-link whitespace-nowrap" href="#avaliacoes">
                 Avaliações (5,0 ★)
               </a>
-              <a className="nav-link" href="#contato">
+              <a className="nav-link whitespace-nowrap" href="#contato">
                 Contato & Sede
               </a>
             </nav>
 
-            <div className="hidden items-center gap-3 lg:flex">
+            <div className="hidden shrink-0 items-center gap-3 xl:flex">
               <GlowingButton
                 href={getWhatsAppUrl(
                   "Olá, Dra. Ingrid Marques! Gostaria de uma consultoria sobre meu benefício no INSS."
@@ -521,7 +521,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="grid size-11 place-items-center rounded-lg border border-[#233427] bg-[#142017] text-white lg:hidden"
+              className="grid size-11 place-items-center rounded-lg border border-[#233427] bg-[#142017] text-white xl:hidden"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -535,7 +535,7 @@ export default function Home() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-b border-[#233427] bg-[#0d1610] px-5 py-6 lg:hidden"
+                className="border-b border-[#233427] bg-[#0d1610] px-5 py-6 xl:hidden"
               >
                 <div className="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wider text-[#9eb1a3]">
                   <a onClick={closeMenu} className="hover:text-white" href="#inicio">
